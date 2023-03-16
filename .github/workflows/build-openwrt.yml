@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_URL: https://github.com/mj22226/openwrt.git
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -31,7 +31,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
-  TZ: Asia/Shanghai
+  TZ: Asia/Kolkata
 
 jobs:
   build:
@@ -40,6 +40,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
+      uses: mikehardy/buildcache-action@v2
 
     - name: Initialization environment
       env:
