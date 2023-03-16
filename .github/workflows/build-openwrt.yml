@@ -39,10 +39,10 @@ jobs:
 
     steps:
     - name: Checkout
-        uses: actions/checkout@main
+      uses: actions/checkout@main
       
     - name: Cache
-        uses: mikehardy/buildcache-action@v2
+      uses: mikehardy/buildcache-action@v2
 
     - name: Initialization environment
       env:
