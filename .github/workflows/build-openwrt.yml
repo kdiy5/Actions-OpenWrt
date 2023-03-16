@@ -42,7 +42,7 @@ jobs:
       uses: actions/checkout@main
       
     - name: Cache
-      uses: mikehardy/buildcache-action@v2
+      uses: uses: hendrikmuhs/ccache-action@v1.2
 
     - name: Initialization environment
       env:
